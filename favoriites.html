@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collector — Favoritos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>Collector</div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Início</a>
+        <a href="categories.html">Itens</a>
+        <a href="community.html">Comunidades</a>
+        <a href="wishlist.html">Lista</a>
+        <a href="collection.html">Minha coleção</a>
+        <a href="favorites.html">Favoritos</a>
+        <a href="profile.html">Usuário</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section-title">
+      <h2>Favoritos</h2>
+      <span class="badge">Curtidos</span>
+    </div>
+
+    <div class="card">
+      <h3>Adicionar favorito</h3>
+      <form id="add-favorite-form">
+        <div class="row">
+          <label>
+            <span class="small">Nome do item</span>
+            <input class="input" id="fav-name" placeholder="Ex: Action figure edição limitada" />
+          </label>
+          <label>
+            <span class="small">Observações</span>
+            <input class="input" id="fav-notes" placeholder="Por que é especial?" />
+          </label>
+        </div>
+        <div class="flex" style="justify-content: flex-end;">
+          <button class="btn" type="submit">Adicionar</button>
+        </div>
+      </form>
+    </div>
+
+    <hr class="hr" />
+
+    <ul id="favorites-list" style="list-style: none; padding: 0;" class="stagger"></ul>
+  </main>
+
+  <footer>O que faz seu coração brilhar?</footer>
+  <script src="script.js"></script>
+</body>
+</html>

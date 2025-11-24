@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collector — Usuário</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>Collector</div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Início</a>
+        <a href="categories.html">Itens</a>
+        <a href="community.html">Comunidades</a>
+        <a href="wishlist.html">Lista</a>
+        <a href="collection.html">Minha coleção</a>
+        <a href="favorites.html">Favoritos</a>
+        <a href="profile.html">Usuário</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section-title">
+      <h2>Perfil do usuário</h2>
+      <span class="badge">Configurações</span>
+    </div>
+
+    <div class="row">
+      <div class="card">
+        <h3>Informações básicas</h3>
+        <form id="profile-form">
+          <label>
+            <span class="small">Nome de exibição</span>
+            <input class="input" id="displayName" placeholder="Como você quer aparecer?" />
+          </label>
+          <label>
+            <span class="small">Localização</span>
+            <input class="input" id="location" placeholder="Cidade, país" />
+          </label>
+          <label>
+            <span class="small">Bio</span>
+            <textarea class="input" id="bio" placeholder="Fale sobre sua história como colecionadora..."></textarea>
+          </label>
+          <div class="flex" style="justify-content: flex-end;">
+            <button class="btn" type="submit">Salvar perfil</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Preferências</h3>
+        <label>
+          <span class="small">Tema</span>
+          <select class="input" disabled>
+            <option>Preto & Dourado (ativo)</option>
+          </select>
+        </label>
+        <p class="muted small">Mais temas em breve.</p>
+      </div>
+    </div>
+
+    <hr class="hr" />
+
+    <div class="card">
+      <h3>Notas pessoais</h3>
+      <p class="muted">Espaço livre para você escrever o que quiser.</p>
+      <textarea class="input" placeholder="Suas ideias, metas e lembranças..."></textarea>
+      <div class="flex" style="justify-content: flex-end; margin-top: 10px;">
+        <button class="btn secondary" onclick="alert('Este bloco é apenas visual. Para salvar, use o campo Bio acima.')">Salvar notas</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>Seja você mesma. Sua coleção, suas regras.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

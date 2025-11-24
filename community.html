@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collector — Comunidade</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>Collector</div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Início</a>
+        <a href="categories.html">Itens</a>
+        <a href="community.html">Comunidades</a>
+        <a href="wishlist.html">Lista</a>
+        <a href="collection.html">Minha coleção</a>
+        <a href="favorites.html">Favoritos</a>
+        <a href="profile.html">Usuário</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section-title">
+      <h2>Comunidades</h2>
+      <span class="badge">Conectar</span>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Trocas & Achados</h3>
+        <p class="muted">Compartilhe oportunidades, trocas e achados raros.</p>
+      </div>
+      <div class="card">
+        <h3>Avaliações</h3>
+        <p class="muted">Peça opinião sobre condição, preço e autenticidade.</p>
+      </div>
+      <div class="card">
+        <h3>Eventos</h3>
+        <p class="muted">Encontros, feiras, leilões e exposições.</p>
+      </div>
+    </div>
+
+    <hr class="hr" />
+
+    <div class="card">
+      <h3>Novo post</h3>
+      <form id="community-form">
+        <label>
+          <span class="small">Título</span>
+          <input class="input" id="post-title" placeholder="Ex: Troca de cartas raras" />
+        </label>
+        <label>
+          <span class="small">Conteúdo</span>
+          <textarea class="input" id="post-content" placeholder="Descreva o que você quer compartilhar..."></textarea>
+        </label>
+        <div class="flex" style="justify-content: flex-end;">
+          <button class="btn" type="submit">Publicar</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="community-feed" class="stagger"></div>
+  </main>
+
+  <footer>Converse, troque e aprenda com outros colecionadores.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

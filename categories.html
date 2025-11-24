@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Collector — Categorias de itens</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar container">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>Collector</div>
+      </div>
+      <div class="nav-links">
+        <a href="home.html">Início</a>
+        <a href="categories.html">Itens</a>
+        <a href="community.html">Comunidades</a>
+        <a href="wishlist.html">Lista</a>
+        <a href="collection.html">Minha coleção</a>
+        <a href="favorites.html">Favoritos</a>
+        <a href="profile.html">Usuário</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="section-title">
+      <h2>Categorias</h2>
+      <span class="badge">Explore</span>
+    </div>
+    <p class="muted">Escolha uma categoria para inspirar sua coleção.</p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Cartas</h3>
+        <p class="muted">Pokémon, Magic, Yu-Gi-Oh!, esportivas, coleções vintage.</p>
+      </div>
+      <div class="card">
+        <h3>Brinquedos</h3>
+        <p class="muted">Action figures, LEGO, bonecos antigos, miniaturas.</p>
+      </div>
+      <div class="card">
+        <h3>Moedas</h3>
+        <p class="muted">Numismática: moedas históricas, medalhas, cédulas.</p>
+      </div>
+      <div class="card">
+        <h3>Quadrinhos</h3>
+        <p class="muted">HQs, mangás, edições limitadas e assinadas.</p>
+      </div>
+      <div class="card">
+        <h3>Selos</h3>
+        <p class="muted">Filatelia: selos nacionais e internacionais raros.</p>
+      </div>
+      <div class="card">
+        <h3>Games</h3>
+        <p class="muted">Jogos retro, consoles clássicos e periféricos.</p>
+      </div>
+    </div>
+
+    <hr class="hr" />
+
+    <div class="card">
+      <h3>Sugira uma nova categoria</h3>
+      <p class="muted">Deixe sua ideia aqui. Ela aparecerá abaixo para você.</p>
+      <form id="suggest-category-form">
+        <input class="input" id="cat-name" placeholder="Nome da categoria" />
+        <textarea class="input" id="cat-notes" placeholder="Por que essa categoria é legal?"></textarea>
+        <button class="btn" type="button" onclick="
+          const name = document.getElementById('cat-name').value.trim();
+          const notes = document.getElementById('cat-notes').value.trim();
+          if (!name) return alert('Informe o nome da categoria');
+          const wrap = document.getElementById('cat-suggestions');
+          const div = document.createElement('div');
+          div.className = 'card';
+          div.innerHTML = `<h3>${name}</h3><p class='muted small'>${notes || 'Sem observações'}</p>`;
+          wrap.prepend(div);
+          document.getElementById('cat-name').value='';
+          document.getElementById('cat-notes').value='';
+        ">Enviar</button>
+      </form>
+    </div>
+
+    <div id="cat-suggestions" class="stagger"></div>
+  </main>
+
+  <footer>Explore e expanda sua coleção.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
